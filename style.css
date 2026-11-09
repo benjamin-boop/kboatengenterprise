@@ -623,7 +623,7 @@ button.white:hover {
   min-height: min(670px, 78vh);
   padding: clamp(60px, 10vw, 130px) var(--page-gutter);
   overflow: hidden;
-  background: #526542 url("img/banner/b2.jpg") center 48% / cover no-repeat;
+  background: #526542;
 }
 
 .video-background video {
