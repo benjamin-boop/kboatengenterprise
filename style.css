@@ -2242,11 +2242,12 @@ textarea {
   }
 
   #navbar #lg-bag a {
-    justify-content: flex-start;
+    justify-content: center;
     width: 45px;
     height: 45px;
-    padding-left: 14px;
+    padding: 0;
     border-radius: 50%;
+    line-height: 1;
   }
 
   #navbar .nav-search-item {
@@ -2305,7 +2306,7 @@ textarea {
 
   body.nav-open::before {
     position: fixed;
-    z-index: 1201;
+    z-index: 1199;
     inset: 0;
     background: rgba(19, 32, 25, 0.4);
     content: "";

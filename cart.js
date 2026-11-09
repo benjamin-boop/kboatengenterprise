@@ -49,7 +49,7 @@ function updateCartCount() {
         if (isMobile) {
             // Position above the icon for mobile
             link.style.position = 'relative';
-            link.style.display = 'inline-block';
+            link.style.display = 'inline-flex';
             countEl.style.position = 'absolute';
             countEl.style.top = '-10px';
             countEl.style.left = '50%';
@@ -337,7 +337,6 @@ document.getElementById("order-form").addEventListener("submit", function (event
     // Redirect to WhatsApp
     window.open(whatsappUrl, "_blank");
 });
-
 
 
 

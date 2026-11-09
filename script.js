@@ -122,7 +122,7 @@ function updateCartCount() {
         if (isMobile) {
             // Position above the icon for mobile
             link.style.position = 'relative';
-            link.style.display = 'inline-block';
+            link.style.display = 'inline-flex';
             countEl.style.position = 'absolute';
             countEl.style.top = '-10px';
             countEl.style.left = '50%';
