@@ -623,7 +623,7 @@ button.white:hover {
   min-height: min(670px, 78vh);
   padding: clamp(60px, 10vw, 130px) var(--page-gutter);
   overflow: hidden;
-  background: #526542 url("path/to/poster-image.jpg") center 48% / cover no-repeat;
+  background: #526542 url("img/banner/b2.jpg") center 48% / cover no-repeat;
 }
 
 .video-background video {
@@ -2023,8 +2023,9 @@ textarea {
   bottom: 65px;
   left: 0;
   display: none;
-  width: min(350px, calc(100vw - 32px));
-  height: 420px;
+  width: min(380px, calc(100vw - 32px));
+  height: min(500px, calc(100dvh - 100px));
+  min-height: 300px;
   flex-direction: column;
   overflow: hidden;
   border: 1px solid var(--line);
@@ -2045,6 +2046,18 @@ textarea {
   background: var(--brand);
   color: #fff;
   font-weight: 700;
+}
+
+#ai-header > span {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+#ai-header small {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 10px;
+  font-weight: 500;
 }
 
 #ai-close {
@@ -2070,6 +2083,31 @@ textarea {
   overflow-y: auto;
 }
 
+#ai-suggestions {
+  display: flex;
+  gap: 6px;
+  padding: 0 12px 10px;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+#ai-suggestions button {
+  flex: 0 0 auto;
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #f0eadb;
+  color: var(--brand-dark);
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+#ai-suggestions button:hover {
+  border-color: var(--brand);
+  background: var(--brand-soft);
+}
+
 .ai-message,
 .user-message {
   max-width: 84%;
@@ -2082,6 +2120,24 @@ textarea {
 .ai-message {
   align-self: flex-start;
   background: #eee7d7;
+}
+
+.ai-message-links {
+  display: grid;
+  gap: 5px;
+  margin-top: 9px;
+}
+
+.ai-message-links a {
+  color: var(--brand-dark);
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.ai-message-links a:hover {
+  color: var(--accent);
 }
 
 .user-message {
@@ -2103,6 +2159,8 @@ textarea {
   padding: 10px;
   border: 1px solid var(--line);
   border-radius: 9px;
+  background: var(--paper);
+  color: var(--ink);
 }
 
 #ai-send {
@@ -2731,7 +2789,8 @@ textarea {
 
   #ai-chat {
     bottom: 55px;
-  }
+      height: min(500px, calc(100dvh - 90px));
+    }
 
   .custom-toast-container {
     top: 10px;

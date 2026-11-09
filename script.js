@@ -1,6 +1,31 @@
 const bar = document.getElementById("bar");
 const close = document.getElementById("close");
 const nav = document.getElementById("navbar");
+const heroVideo = document.querySelector(".video-background video");
+
+if (heroVideo) {
+    heroVideo.muted = true;
+    heroVideo.loop = true;
+    heroVideo.playsInline = true;
+    heroVideo.setAttribute("muted", "");
+    heroVideo.setAttribute("playsinline", "");
+    heroVideo.setAttribute("webkit-playsinline", "");
+
+    const playHeroVideo = () => {
+        if (document.hidden || !heroVideo.paused) return;
+        heroVideo.play().catch(error => {
+            console.warn("The homepage background video could not start playback.", error);
+        });
+    };
+
+    heroVideo.addEventListener("canplay", playHeroVideo);
+    heroVideo.addEventListener("ended", () => {
+        heroVideo.currentTime = 0;
+        playHeroVideo();
+    });
+    document.addEventListener("visibilitychange", playHeroVideo);
+    playHeroVideo();
+}
 
 function setNavigationOpen(isOpen) {
     if (!bar || !nav) return;
