@@ -6,5 +6,12 @@ window.KBApprovedProductReviews = [
     rating: 5,
     comment: "This product gives me a reason to start the day stronger. More hydrating and stress release. rarely itchy. i really love this!",
     verifiedPurchase: true
+    },
+    {
+        productId: "100",
+        displayName: "Osman Ajara - Jumia",
+        rating: 5,
+        comment: "Nice",
+        verifiedPurchase: true
     }
 ];
